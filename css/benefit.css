@@ -1,0 +1,104 @@
+/* Benefit Section Styles */
+.benefit {
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.benefit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, var(--light-bg) 0%, var(--white) 100%);
+    z-index: 1;
+}
+
+.benefit .container {
+    position: relative;
+    z-index: 2;
+}
+
+.benefit h2 {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 60px;
+    font-size: 42px;
+    text-align: center;
+}
+
+.benefit .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.benefit .card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.benefit .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: transparent;
+}
+
+.benefit .card i {
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 25px;
+    background: rgba(4, 217, 57, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.benefit .card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.benefit .card p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .benefit {
+        padding: 60px 0;
+    }
+    
+    .benefit h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .benefit .grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .benefit .card {
+        padding: 30px 25px;
+    }
+    
+    .benefit .card h3 {
+        font-size: 20px;
+    }
+}
